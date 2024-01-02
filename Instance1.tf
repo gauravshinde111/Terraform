@@ -25,7 +25,7 @@ resource "aws_security_group" "allow_tls" {
 
 resource "aws_instance" "web" {
   ami                    = "ami-07ec4220c92589b40"
-  instance_type          = "t2.micro"
+  instance_type          = "t3.micro"
   key_name               = "gaurav"
   vpc_security_group_ids = ["${aws_security_group.allow_tls.id}"]
   tags = {
