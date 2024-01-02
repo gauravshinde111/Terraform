@@ -24,9 +24,9 @@ resource "aws_security_group" "allow_tls" {
 
 
 resource "aws_instance" "web" {
-  ami                    = "ami-07ec4220c92589b40"
-  instance_type          = "t3.micro"
-  key_name               = "gaurav"
+  ami                    = "ami-0f5ee92e2d63afc18"
+  instance_type          = "t2.micro"
+  key_name               = "gaurav1"
   vpc_security_group_ids = ["${aws_security_group.allow_tls.id}"]
   tags = {
     Name = "terraform1"
