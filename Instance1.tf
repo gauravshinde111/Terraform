@@ -24,12 +24,12 @@ resource "aws_security_group" "allow_tls" {
 
 
 resource "aws_instance" "web" {
-  ami                    = "ami-0f5ee92e2d63afc18"
+  ami                    = "ami-07ec4220c92589b40"
   instance_type          = "t2.micro"
-  key_name               = "ajit123-key"
+  key_name               = "gaurav"
   vpc_security_group_ids = ["${aws_security_group.allow_tls.id}"]
   tags = {
-    Name = "first-tf-instance"
+    Name = "terraform1"
   }
 }
 
